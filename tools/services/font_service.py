@@ -16,12 +16,12 @@ from tools.configs import path_define, FontFormat
 def make_fonts(font_formats: list[FontFormat]):
     builder = FontBuilder()
     builder.font_metric.font_size = 23
-    builder.font_metric.horizontal_layout.ascent = 23
-    builder.font_metric.horizontal_layout.descent = 0
+    builder.font_metric.horizontal_layout.ascent = 22
+    builder.font_metric.horizontal_layout.descent = -1
     builder.font_metric.vertical_layout.ascent = 12
     builder.font_metric.vertical_layout.descent = -11
-    builder.font_metric.x_height = 23
-    builder.font_metric.cap_height = 23
+    builder.font_metric.x_height = 21
+    builder.font_metric.cap_height = 21
 
     builder.meta_info.version = configs.version
     builder.meta_info.created_time = datetime.datetime.fromisoformat(f'{configs.version_time}T00:00:00Z')
@@ -45,7 +45,7 @@ def make_fonts(font_formats: list[FontFormat]):
     notdef_bitmap.save_png(notdef_file_path)
     builder.glyphs.append(Glyph(
         name='.notdef',
-        horizontal_origin=(0, 0),
+        horizontal_origin=(0, -1),
         advance_width=23,
         vertical_origin=(-11, 0),
         advance_height=23,
@@ -71,7 +71,7 @@ def make_fonts(font_formats: list[FontFormat]):
         builder.character_mapping[code_point] = glyph_name
         builder.glyphs.append(Glyph(
             name=glyph_name,
-            horizontal_origin=(0, 0),
+            horizontal_origin=(0, -1),
             advance_width=23,
             vertical_origin=(-11, 0),
             advance_height=23,
