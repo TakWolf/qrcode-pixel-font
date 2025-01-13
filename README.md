@@ -41,6 +41,7 @@
 - [Pure python QR Code generator](https://github.com/lincolnloop/python-qrcode)
 - [tqdm](https://github.com/tqdm/tqdm)
 - [Loguru](https://github.com/Delgan/loguru)
+- [Cyclopts](https://github.com/BrianPugh/cyclopts)
 - [Vue.js](https://cn.vuejs.org)
 
 ## 赞助
