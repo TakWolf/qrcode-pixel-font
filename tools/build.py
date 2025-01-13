@@ -96,6 +96,14 @@ def _make_release_zip():
         logger.info("Make release zip: '{}'", file_path)
 
 
+def _update_www():
+    if path_define.www_fonts_dir.exists():
+        shutil.rmtree(path_define.www_fonts_dir)
+    path_define.www_fonts_dir.mkdir(parents=True)
+
+    shutil.copyfile(path_define.outputs_dir.joinpath('qrcode-pixel.woff2'), path_define.www_fonts_dir.joinpath('qrcode-pixel.woff2'))
+
+
 def main():
     if path_define.build_dir.exists():
         shutil.rmtree(path_define.build_dir)
@@ -104,6 +112,7 @@ def main():
 
     _make_fonts()
     _make_release_zip()
+    _update_www()
 
 
 if __name__ == '__main__':

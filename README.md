@@ -6,6 +6,10 @@
 
 将字符显示为二维码的字体。
 
+可以通过 [qrcode-pixel-font.takwolf.com](https://qrcode-pixel-font.takwolf.com) 实时预览字体效果。
+
+![Preview](docs/preview.png)
+
 ## 本地构建
 
 这是一个标准的 [Python3](https://www.python.org) 项目。
@@ -33,6 +37,7 @@
 - [Pure python QR Code generator](https://github.com/lincolnloop/python-qrcode)
 - [tqdm](https://github.com/tqdm/tqdm)
 - [Loguru](https://github.com/Delgan/loguru)
+- [Vue.js](https://cn.vuejs.org)
 
 ## 赞助
 
