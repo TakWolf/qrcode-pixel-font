@@ -52,7 +52,8 @@ def make_fonts(font_formats: list[FontFormat]):
         bitmap=notdef_bitmap.data,
     ))
 
-    for code_point in tqdm(range(0, 0xFFFF + 1), desc='Make QRCodes'):
+    alphabet = []
+    for code_point in range(0x0000, 0xFFFF + 1):
         # D800..DB7F; High Surrogates
         # DB80..DBFF; High Private Use Surrogates
         # DC00..DFFF; Low Surrogates
@@ -63,7 +64,10 @@ def make_fonts(font_formats: list[FontFormat]):
         if not c.isprintable() and unicodedata.category(c) != 'Cc':
             continue
 
-        image = qrcode.make(c, image_factory=PyPNGImage)
+        alphabet.append(code_point)
+
+    for code_point in tqdm(alphabet, desc='Make QRCodes'):
+        image = qrcode.make(chr(code_point), image_factory=PyPNGImage)
         assert image.width == 21
         bitmap = MonoBitmap.create(21, 21)
         for y, qr_row in enumerate(image.modules):
