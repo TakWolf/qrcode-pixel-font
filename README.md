@@ -6,6 +6,10 @@
 
 将字符显示为二维码的字体。
 
+这个项目提供了构建字体所需要的完整程序。
+
+## 预览
+
 可以通过 [qrcode-pixel-font.takwolf.com](https://qrcode-pixel-font.takwolf.com) 实时预览字体效果。
 
 ![Preview](docs/preview.png)
