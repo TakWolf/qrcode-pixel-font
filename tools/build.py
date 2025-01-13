@@ -54,11 +54,13 @@ def _make_fonts():
     ))
 
     for code_point in tqdm(range(0, 0xFFFF + 1), desc='Make QRCodes'):
-        c = chr(code_point)
-        if not c.isprintable():
+        # D800..DB7F; High Surrogates
+        # DB80..DBFF; High Private Use Surrogates
+        # DC00..DFFF; Low Surrogates
+        if 0xD800 <= code_point <= 0xDFFF:
             continue
 
-        image = qrcode.make(c, image_factory=PyPNGImage)
+        image = qrcode.make(chr(code_point), image_factory=PyPNGImage)
         assert image.width == 21
         bitmap = MonoBitmap.create(21, 21)
         for y, qr_row in enumerate(image.modules):
