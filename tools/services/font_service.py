@@ -1,4 +1,5 @@
 import datetime
+import unicodedata
 
 import qrcode
 from loguru import logger
@@ -58,7 +59,11 @@ def make_fonts(font_formats: list[FontFormat]):
         if 0xD800 <= code_point <= 0xDFFF:
             continue
 
-        image = qrcode.make(chr(code_point), image_factory=PyPNGImage)
+        c = chr(code_point)
+        if not c.isprintable() and unicodedata.category(c) != 'Cc':
+            continue
+
+        image = qrcode.make(c, image_factory=PyPNGImage)
         assert image.width == 21
         bitmap = MonoBitmap.create(21, 21)
         for y, qr_row in enumerate(image.modules):
