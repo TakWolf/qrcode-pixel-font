@@ -8,20 +8,19 @@
 </head>
 <body>
 
-<div id="app">
-    <div class="page">
-        <h1 class="title">QRCode Pixel Font</h1>
-        <div class="main">
-            <div class="label">Text: </div>
-            <textarea class="input-text" v-model="input"></textarea>
-            <div class="label">QRCodes:</div>
-            <textarea class="input-qrcodes" v-model="input"></textarea>
-        </div>
-        <div class="footer">
-            <span>© 2025 狼人小林</span>
-            <span class="separate">-</span>
-            <a href="https://github.com/TakWolf/qrcode-pixel-font" target="_blank">Source Code</a>
-        </div>
+<div id="app" class="page">
+    <h1 class="title">QRCode Pixel Font</h1>
+    <div class="main">
+        <div class="label">Text: </div>
+        <textarea class="input font-normal" v-model="input"></textarea>
+        <br>
+        <div class="label">QRCodes:</div>
+        <textarea class="input font-qrcode" v-model="input"></textarea>
+    </div>
+    <div class="footer">
+        <span>© 2025 狼人小林</span>
+        <span class="separate">-</span>
+        <a href="https://github.com/TakWolf/qrcode-pixel-font" target="_blank">Source Code</a>
     </div>
 </div>
 
