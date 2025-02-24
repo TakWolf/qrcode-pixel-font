@@ -10,29 +10,7 @@
 
 ## 预览
 
-可以通过 [qrcode-pixel-font.takwolf.com](https://qrcode-pixel-font.takwolf.com) 实时预览字体效果。
-
 ![Preview](docs/preview.png)
-
-## 本地构建
-
-这是一个标准的 [Python3](https://www.python.org) 项目。
-
-当您配置好运行环境后，执行 `python -m tools.build` 命令来开始构建。
-
-等待任务完成后，可在 `build/outputs` 目录下找到生成的字体文件。
-
-## 授权许可
-
-分为「字体」和「构建程序」两个部分。
-
-### 字体
-
-使用 [「SIL 开放字体许可证第 1.1 版」](LICENSE-OFL) 授权。
-
-### 构建程序
-
-使用 [「MIT 许可证」](LICENSE-MIT) 授权。
 
 ## 程序依赖
 
@@ -43,6 +21,18 @@
 - [Loguru](https://github.com/Delgan/loguru)
 - [Cyclopts](https://github.com/BrianPugh/cyclopts)
 - [Vue.js](https://cn.vuejs.org)
+
+## 许可证
+
+分为「字体」和「构建程序」两个部分。
+
+### 字体
+
+使用 [「SIL 开放字体许可证第 1.1 版」](LICENSE-OFL) 授权。
+
+### 构建程序
+
+使用 [「MIT 许可证」](LICENSE-MIT) 授权。
 
 ## 赞助
 
