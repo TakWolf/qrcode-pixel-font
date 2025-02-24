@@ -3,6 +3,7 @@
 [![License OFL](https://img.shields.io/badge/license-OFL--1.1-orange)](https://openfontlicense.org)
 [![License MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/license/MIT)
 [![Releases](https://img.shields.io/github/v/release/TakWolf/qrcode-pixel-font)](https://github.com/TakWolf/qrcode-pixel-font/releases)
+[<img src="https://api.gitsponsors.com/api/badge/img?id=916062067" height="20">](https://api.gitsponsors.com/api/badge/link?p=PoNyTre7Hrm54gcMdRkkhvojSHDXCnpDOZHy/v9KyYCXm9hW4B1RiV0Jmnzqa8qiO46KuEnQ89gmwA4NLv1aXzgaL8WJFvYXiSy4q0C3d3fCQRlQteo0PLtce2hj8lZVQiSO7R6WHZsgLfJtN+L4iw==)
 
 将字符显示为二维码的字体。
 
