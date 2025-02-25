@@ -2,10 +2,7 @@ from tools import cli
 
 
 def main():
-    cli.main(
-        cleanup=True,
-        release=True,
-    )
+    cli.main(cleanup=True)
 
 
 if __name__ == '__main__':

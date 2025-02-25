@@ -17,7 +17,6 @@ app = App(
 def main(
         cleanup: bool = False,
         font_formats: set[FontFormat] | None = None,
-        release: bool = False,
 ):
     if font_formats is None:
         font_formats = configs.font_formats
@@ -26,16 +25,13 @@ def main(
 
     logger.info('cleanup = {}', cleanup)
     logger.info('font_formats = {}', font_formats)
-    logger.info('release = {}', release)
 
     if cleanup and path_define.build_dir.exists():
         shutil.rmtree(path_define.build_dir)
         logger.info("Delete dir: '{}'", path_define.build_dir)
 
     font_service.make_fonts(font_formats)
-
-    if release:
-        publish_service.make_release_zip(font_formats)
+    publish_service.make_release_zip(font_formats)
 
     if 'woff2' in font_formats:
         publish_service.update_www()
