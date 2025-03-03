@@ -31,7 +31,7 @@ def main(
         logger.info("Delete dir: '{}'", path_define.build_dir)
 
     font_service.make_fonts(font_formats)
-    publish_service.make_release_zip(font_formats)
+    publish_service.make_release_zips(font_formats)
 
     if 'woff2' in font_formats:
         publish_service.update_www()

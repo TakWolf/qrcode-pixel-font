@@ -7,8 +7,9 @@ from tools import configs
 from tools.configs import path_define, FontFormat
 
 
-def make_release_zip(font_formats: list[FontFormat]):
+def make_release_zips(font_formats: list[FontFormat]):
     path_define.releases_dir.mkdir(parents=True, exist_ok=True)
+
     for font_format in font_formats:
         file_path = path_define.releases_dir.joinpath(f'qrcode-pixel-font-{font_format}-v{configs.version}.zip')
         with zipfile.ZipFile(file_path, 'w') as file:

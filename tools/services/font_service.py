@@ -79,6 +79,7 @@ def make_fonts(font_formats: list[FontFormat]):
         ))
 
     path_define.outputs_dir.mkdir(parents=True, exist_ok=True)
+
     for font_format in font_formats:
         file_path = path_define.outputs_dir.joinpath(f'qrcode-pixel.{font_format}')
         if font_format == 'woff2':
