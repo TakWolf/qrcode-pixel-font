@@ -45,9 +45,9 @@ def make_fonts(font_formats: list[FontFormat]):
     notdef_bitmap.save_png(notdef_file_path)
     builder.glyphs.append(Glyph(
         name='.notdef',
-        horizontal_origin=(0, -1),
+        horizontal_offset=(0, -1),
         advance_width=23,
-        vertical_origin=(-11, 0),
+        vertical_offset=(-11, 0),
         advance_height=23,
         bitmap=notdef_bitmap.data,
     ))
@@ -71,9 +71,9 @@ def make_fonts(font_formats: list[FontFormat]):
         builder.character_mapping[code_point] = glyph_name
         builder.glyphs.append(Glyph(
             name=glyph_name,
-            horizontal_origin=(0, -1),
+            horizontal_offset=(0, -1),
             advance_width=23,
-            vertical_origin=(-11, 0),
+            vertical_offset=(-11, 0),
             advance_height=23,
             bitmap=bitmap.data,
         ))
