@@ -1,5 +1,5 @@
-import datetime
 import unicodedata
+from datetime import datetime
 
 import qrcode
 from loguru import logger
@@ -24,7 +24,7 @@ def make_fonts(font_formats: list[FontFormat]):
     builder.font_metric.cap_height = 21
 
     builder.meta_info.version = configs.version
-    builder.meta_info.created_time = datetime.datetime.fromisoformat(f'{configs.version_time}T00:00:00Z')
+    builder.meta_info.created_time = datetime.fromisoformat(f'{configs.version_time}T00:00:00Z')
     builder.meta_info.modified_time = builder.meta_info.created_time
     builder.meta_info.family_name = 'QRCode Pixel'
     builder.meta_info.weight_name = WeightName.REGULAR
