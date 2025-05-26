@@ -1,3 +1,4 @@
+import re
 import shutil
 import zipfile
 
@@ -24,4 +25,9 @@ def update_www():
         shutil.rmtree(path_define.www_fonts_dir)
     path_define.www_fonts_dir.mkdir(parents=True)
 
-    shutil.copyfile(path_define.outputs_dir.joinpath('qrcode-pixel.otf.woff2'), path_define.www_fonts_dir.joinpath('qrcode-pixel.otf.woff2'))
+    for path_from in path_define.outputs_dir.iterdir():
+        if re.match(r'.*\.otf.woff2', path_from.name) is None:
+            continue
+        path_to = path_define.www_fonts_dir.joinpath(path_from.name)
+        shutil.copyfile(path_from, path_to)
+        logger.info("Copy file: '{}' -> '{}'", path_from, path_to)
