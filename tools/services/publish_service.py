@@ -24,4 +24,4 @@ def update_www():
         shutil.rmtree(path_define.www_fonts_dir)
     path_define.www_fonts_dir.mkdir(parents=True)
 
-    shutil.copyfile(path_define.outputs_dir.joinpath('qrcode-pixel.woff2'), path_define.www_fonts_dir.joinpath('qrcode-pixel.woff2'))
+    shutil.copyfile(path_define.outputs_dir.joinpath('qrcode-pixel.otf.woff2'), path_define.www_fonts_dir.joinpath('qrcode-pixel.otf.woff2'))
