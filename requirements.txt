@@ -1,6 +1,6 @@
-pixel-font-builder==0.0.35
-pixel-font-knife==0.0.12
+pixel-font-builder==0.0.37
+pixel-font-knife==0.0.16
 qrcode==8.2
 tqdm==4.67.1
 loguru==0.7.3
-cyclopts==3.16.1
+cyclopts==3.22.1
