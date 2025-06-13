@@ -38,7 +38,7 @@ def make_fonts(font_formats: list[FontFormat]):
     builder.meta_info.license_info = 'This Font Software is licensed under the SIL Open Font License, Version 1.1'
     builder.meta_info.vendor_url = 'https://qrcode-pixel-font.takwolf.com'
     builder.meta_info.designer_url = 'https://takwolf.com'
-    builder.meta_info.license_url = 'https://openfontlicense.org'
+    builder.meta_info.license_url = 'https://github.com/TakWolf/qrcode-pixel-font/blob/master/LICENSE-OFL'
 
     notdef_file_path = path_define.glyphs_dir.joinpath('notdef.png')
     notdef_bitmap = MonoBitmap.load_png(notdef_file_path)

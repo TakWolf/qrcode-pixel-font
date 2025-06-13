@@ -1,7 +1,7 @@
 # 二维码像素字体 / QRCode Pixel Font
 
-[![License OFL](https://img.shields.io/badge/license-OFL--1.1-orange)](https://openfontlicense.org)
-[![License MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/license/MIT)
+[![License OFL](https://img.shields.io/badge/license-OFL--1.1-orange)](LICENSE-OFL)
+[![License MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE-MIT)
 [![Releases](https://img.shields.io/github/v/release/TakWolf/qrcode-pixel-font)](https://github.com/TakWolf/qrcode-pixel-font/releases)
 
 将字符显示为二维码的字体。
