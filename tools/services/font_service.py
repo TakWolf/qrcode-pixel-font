@@ -10,7 +10,8 @@ from qrcode.image.pure import PyPNGImage
 from tqdm import tqdm
 
 from tools import configs
-from tools.configs import path_define, FontFormat
+from tools.configs import path_define
+from tools.configs.options import FontFormat
 
 
 def make_fonts(font_formats: list[FontFormat]):
