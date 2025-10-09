@@ -69,7 +69,6 @@ def make_fonts(font_formats: list[FontFormat]):
         bitmap = bitmap.resize(left=1, right=1, top=1, bottom=1)
 
         glyph_name = f'u{code_point:04X}'
-        builder.character_mapping[code_point] = glyph_name
         builder.glyphs.append(Glyph(
             name=glyph_name,
             horizontal_offset=(0, -1),
@@ -78,6 +77,7 @@ def make_fonts(font_formats: list[FontFormat]):
             advance_height=23,
             bitmap=bitmap.data,
         ))
+        builder.character_mapping[code_point] = glyph_name
 
     path_define.outputs_dir.mkdir(parents=True, exist_ok=True)
 
