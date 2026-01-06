@@ -1,7 +1,7 @@
-import unicodedata
 from datetime import datetime
 
 import qrcode
+import unicodedata2
 from loguru import logger
 from pixel_font_builder import FontBuilder, WeightName, SerifStyle, SlantStyle, WidthStyle, Glyph, opentype
 from pixel_font_knife.mono_bitmap import MonoBitmap
@@ -55,7 +55,7 @@ def make_fonts(font_formats: list[FontFormat]):
     alphabet = []
     for code_point in range(0x0000, 0xFFFF + 1):
         c = chr(code_point)
-        if c.isprintable() or unicodedata.category(c) == 'Cc':
+        if c.isprintable() or unicodedata2.category(c) == 'Cc':
             alphabet.append(code_point)
 
     for code_point in tqdm(alphabet, desc='Make QRCodes'):

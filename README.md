@@ -16,6 +16,7 @@
 
 - [Pixel Font Builder](https://github.com/TakWolf/pixel-font-builder)
 - [Pixel Font Knife](https://github.com/TakWolf/pixel-font-knife)
+- [unicodedata2](https://github.com/fonttools/unicodedata2)
 - [Pure python QR Code generator](https://github.com/lincolnloop/python-qrcode)
 - [tqdm](https://github.com/tqdm/tqdm)
 - [Loguru](https://github.com/Delgan/loguru)

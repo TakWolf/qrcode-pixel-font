@@ -6,6 +6,7 @@ requires-python = ">=3.14"
 dependencies = [
     "pixel-font-builder==0.0.47",
     "pixel-font-knife==0.0.20",
+    "unicodedata2==17.0.0",
     "qrcode==8.2",
     "tqdm==4.67.1",
     "loguru==0.7.3",
