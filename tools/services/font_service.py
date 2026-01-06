@@ -55,7 +55,8 @@ def make_fonts(font_formats: list[FontFormat]):
     alphabet = []
     for code_point in range(0x0000, 0xFFFF + 1):
         c = chr(code_point)
-        if c.isprintable() or unicodedata2.category(c) == 'Cc':
+        category = unicodedata2.category(c)
+        if c in ('\u0020', '\u3000') or category.startswith(('L', 'M', 'N', 'P', 'S')):
             alphabet.append(code_point)
 
     for code_point in tqdm(alphabet, desc='Make QRCodes'):
