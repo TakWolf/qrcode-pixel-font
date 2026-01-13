@@ -18,6 +18,7 @@
 - [Pixel Font Knife](https://github.com/TakWolf/pixel-font-knife)
 - [unicodedata2](https://github.com/fonttools/unicodedata2)
 - [Pure python QR Code generator](https://github.com/lincolnloop/python-qrcode)
+- [PyPNG](https://gitlab.com/drj11/pypng)
 - [tqdm](https://github.com/tqdm/tqdm)
 - [Loguru](https://github.com/Delgan/loguru)
 - [Cyclopts](https://github.com/BrianPugh/cyclopts)
