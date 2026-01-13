@@ -4,11 +4,11 @@ version = "0.0.0"
 requires-python = ">=3.14"
 
 dependencies = [
-    "pixel-font-builder==0.0.47",
-    "pixel-font-knife==0.0.20",
-    "unicodedata2==17.0.0",
+    "pixel-font-builder==0.0.48",
+    "pixel-font-knife==0.0.23",
+    "unicodedata2==17.0.1",
     "qrcode==8.2",
-    "tqdm==4.67.1",
+    "tqdm==4.67.3",
     "loguru==0.7.3",
-    "cyclopts==4.4.4",
+    "cyclopts==4.16.1",
 ]
