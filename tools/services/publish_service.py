@@ -15,6 +15,7 @@ def make_release_zips(font_formats: list[FontFormat]):
         file_path = path_define.releases_dir.joinpath(f'qrcode-pixel-font-{font_format}-v{configs.version}.zip')
         with zipfile.ZipFile(file_path, 'w') as file:
             file.write(path_define.project_root_dir.joinpath('LICENSE-OFL'), 'OFL.txt')
+
             font_file_name = f'qrcode-pixel.{font_format}'
             file.write(path_define.outputs_dir.joinpath(font_file_name), font_file_name)
         logger.info("Make release zip: '{}'", file_path)
