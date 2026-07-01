@@ -211,16 +211,16 @@ wheels = [
 
 [[package]]
 name = "pixel-font-builder"
-version = "0.0.52"
+version = "0.0.53"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "bdffont" },
     { name = "fonttools", extra = ["woff"] },
     { name = "pcffont" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/df/7c/3c06982bf58517f58eb85f6096576cb9740974917b589b37f36b963349e0/pixel_font_builder-0.0.52.tar.gz", hash = "sha256:fa8c27bba50de796a74e113eabb84765e6583dec4774b7887a9cebf5cb2c79fd", size = 21595, upload-time = "2026-06-30T12:54:14.666Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a6/d9/a66c43cbdcc4246b83db208d776c73af0fee5d9eb4a9674ed9361f5f397c/pixel_font_builder-0.0.53.tar.gz", hash = "sha256:b2015b85ad230641abc09f38ead9629ec912acb50a4848ef0defa3cb455b7033", size = 21861, upload-time = "2026-07-01T04:22:53.947Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/97/cc/98756a0669dfa1bd2a029deaecc72b17d8bc5bca8482cab915adbf24dd64/pixel_font_builder-0.0.52-py3-none-any.whl", hash = "sha256:840e66f5ae22e9dfe643cd2d0d66a2a424764040f4569a4838aea90e13e8e7ae", size = 32285, upload-time = "2026-06-30T12:54:13.805Z" },
+    { url = "https://files.pythonhosted.org/packages/04/1e/bf01cc48415f2320673be68f5ebb8893c27b9f58072c61ebf676da7e64de/pixel_font_builder-0.0.53-py3-none-any.whl", hash = "sha256:a33145b30859428173e284e055c0e8dbdf74a803c1d999fda9348f7fab411dd5", size = 32550, upload-time = "2026-07-01T04:22:52.951Z" },
 ]
 
 [[package]]
@@ -320,7 +320,7 @@ dependencies = [
 requires-dist = [
     { name = "cyclopts", specifier = "==4.20.0" },
     { name = "loguru", specifier = "==0.7.3" },
-    { name = "pixel-font-builder", specifier = "==0.0.52" },
+    { name = "pixel-font-builder", specifier = "==0.0.53" },
     { name = "pixel-font-knife", specifier = "==0.0.24" },
     { name = "pypng", specifier = ">=0.20220715.0" },
     { name = "qrcode", specifier = "==8.2" },
