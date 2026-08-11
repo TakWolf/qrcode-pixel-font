@@ -3,7 +3,7 @@ from datetime import datetime
 import qrcode
 import unicodedata2
 from loguru import logger
-from pixel_font_builder import FontBuilder, WeightName, SerifStyle, SlantStyle, WidthStyle, Glyph, opentype
+from pixel_font_builder import FontBuilder, WeightName, SerifStyle, SlantStyle, WidthStyle, Glyph
 from pixel_font_knife.mono_bitmap import MonoBitmap
 from qrcode.image.pure import PyPNGImage
 from tqdm import tqdm
@@ -83,15 +83,5 @@ def make_fonts(font_formats: list[FontFormat]):
 
     for font_format in font_formats:
         file_path = path_define.outputs_dir.joinpath(f'qrcode-pixel.{font_format}')
-        match font_format:
-            case 'otf.woff':
-                builder.save_otf(file_path, flavor=opentype.Flavor.WOFF)
-            case 'otf.woff2':
-                builder.save_otf(file_path, flavor=opentype.Flavor.WOFF2)
-            case 'ttf.woff':
-                builder.save_ttf(file_path, flavor=opentype.Flavor.WOFF)
-            case 'ttf.woff2':
-                builder.save_ttf(file_path, flavor=opentype.Flavor.WOFF2)
-            case _:
-                getattr(builder, f'save_{font_format.replace('.', '_')}')(file_path)
+        getattr(builder, f'save_{font_format.replace('.', '_')}')(file_path)
         logger.info("Make font: '{}'", file_path)
