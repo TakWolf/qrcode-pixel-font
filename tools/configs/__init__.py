@@ -1,3 +1,3 @@
 
-version = '1.8.0'
-version_time = '2026-08-11'
+VERSION = '1.8.0'
+VERSION_TIME = '2026-08-11'

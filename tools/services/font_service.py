@@ -23,8 +23,8 @@ def make_fonts(font_formats: list[FontFormat]):
     builder.font_metric.x_height = 21
     builder.font_metric.cap_height = 21
 
-    builder.meta_info.version = configs.version
-    builder.meta_info.created_time = datetime.fromisoformat(f'{configs.version_time}T00:00:00Z')
+    builder.meta_info.version = configs.VERSION
+    builder.meta_info.created_time = datetime.fromisoformat(f'{configs.VERSION_TIME}T00:00:00Z')
     builder.meta_info.modified_time = builder.meta_info.created_time
     builder.meta_info.family_name = 'QRCode Pixel'
     builder.meta_info.weight_name = WeightName.REGULAR
@@ -40,7 +40,7 @@ def make_fonts(font_formats: list[FontFormat]):
     builder.meta_info.designer_url = 'https://takwolf.com'
     builder.meta_info.license_url = 'https://github.com/TakWolf/qrcode-pixel-font/blob/master/LICENSE-OFL'
 
-    notdef_file_path = path_define.glyphs_dir.joinpath('notdef.png')
+    notdef_file_path = path_define.GLYPHS_DIR.joinpath('notdef.png')
     notdef_bitmap = MonoBitmap.load_png(notdef_file_path)
     notdef_bitmap.save_png(notdef_file_path)
     builder.glyphs.append(Glyph(
@@ -79,9 +79,9 @@ def make_fonts(font_formats: list[FontFormat]):
         ))
         builder.character_mapping[code_point] = glyph_name
 
-    path_define.outputs_dir.mkdir(parents=True, exist_ok=True)
+    path_define.OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
 
     for font_format in font_formats:
-        file_path = path_define.outputs_dir.joinpath(f'qrcode-pixel.{font_format}')
+        file_path = path_define.OUTPUTS_DIR.joinpath(f'qrcode-pixel.{font_format}')
         getattr(builder, f'save_{font_format.replace('.', '_')}')(file_path)
         logger.info("Make font: '{}'", file_path)
