@@ -13,7 +13,7 @@ from tools.configs import path_define
 from tools.configs.options import FontFormat
 
 
-def make_fonts(font_formats: list[FontFormat]):
+def make_fonts(font_formats: list[FontFormat]) -> None:
     builder = FontBuilder()
     builder.font_metric.font_size = 23
     builder.font_metric.horizontal_layout.ascent = 22
