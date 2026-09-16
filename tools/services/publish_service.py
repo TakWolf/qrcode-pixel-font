@@ -1,4 +1,5 @@
 import shutil
+from collections.abc import Sequence
 from zipfile import ZipFile
 
 from loguru import logger
@@ -8,7 +9,7 @@ from tools.configs import path_define
 from tools.configs.options import FontFormat
 
 
-def make_release_zips(font_formats: list[FontFormat]) -> None:
+def make_release_zips(font_formats: Sequence[FontFormat]) -> None:
     path_define.RELEASES_DIR.mkdir(parents=True, exist_ok=True)
 
     for font_format in font_formats:
