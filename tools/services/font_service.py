@@ -5,7 +5,7 @@ import qrcode
 import unicodedata2
 from loguru import logger
 from pixel_font_builder import FontBuilder, WeightName, SerifStyle, SlantStyle, WidthStyle, Glyph
-from pixel_font_knife.mono_bitmap import MonoBitmap
+from pixel_font_knife.bitmap.mono_bitmap import MonoBitmap
 from qrcode.image.pure import PyPNGImage
 from tqdm import tqdm
 
@@ -63,7 +63,7 @@ def make_fonts(font_formats: Sequence[FontFormat]) -> None:
     for code_point in tqdm(alphabet, desc='Make QRCodes'):
         image = qrcode.make(chr(code_point), image_factory=PyPNGImage)
         assert image.width == 21
-        bitmap = MonoBitmap.create(21, 21)
+        bitmap = MonoBitmap.blank(21, 21)
         for y, qr_row in enumerate(image.modules):
             for x, flag in enumerate(qr_row):
                 bitmap[y][x] = 1 if flag else 0
