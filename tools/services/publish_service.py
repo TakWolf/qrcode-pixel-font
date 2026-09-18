@@ -30,5 +30,6 @@ def update_www() -> None:
     for path_from in path_define.OUTPUTS_DIR.iterdir():
         if not path_from.name.endswith('.otf.woff2'):
             continue
+
         path_to = path_from.copy_into(path_define.WWW_FONTS_DIR)
         logger.info("Copy file: '{}' -> '{}'", path_from, path_to)
