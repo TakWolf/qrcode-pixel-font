@@ -13,13 +13,13 @@ def make_release_zips(font_formats: Sequence[FontFormat]) -> None:
     path_define.RELEASES_DIR.mkdir(parents=True, exist_ok=True)
 
     for font_format in font_formats:
-        file_path = path_define.RELEASES_DIR.joinpath(f'qrcode-pixel-font-{font_format}-v{configs.VERSION}.zip')
-        with ZipFile(file_path, 'w') as file:
+        zip_file_path = path_define.RELEASES_DIR.joinpath(f'qrcode-pixel-font-{font_format}-v{configs.VERSION}.zip')
+        with ZipFile(zip_file_path, 'w') as file:
             file.write(path_define.PROJECT_ROOT_DIR.joinpath('LICENSE-OFL'), 'OFL.txt')
 
-            font_file_name = f'qrcode-pixel.{font_format}'
-            file.write(path_define.OUTPUTS_DIR.joinpath(font_file_name), font_file_name)
-        logger.info("Make release zip: '{}'", file_path)
+            font_file_path = path_define.OUTPUTS_DIR.joinpath(f'qrcode-pixel.{font_format}')
+            file.write(font_file_path, font_file_path.name)
+        logger.info("Make release zip: '{}'", zip_file_path)
 
 
 def update_www() -> None:
