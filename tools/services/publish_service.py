@@ -27,8 +27,8 @@ def update_www() -> None:
         shutil.rmtree(path_define.WWW_FONTS_DIR)
     path_define.WWW_FONTS_DIR.mkdir(parents=True)
 
-    for path_from in path_define.OUTPUTS_DIR.iterdir():
-        if not path_from.name.endswith('.otf.woff2'):
+    for path_from in path_define.OUTPUTS_DIR.glob('*.otf.woff2'):
+        if not path_from.is_file():
             continue
 
         path_to = path_from.copy_into(path_define.WWW_FONTS_DIR)
